@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledTextWithLine = styled.div`
   position: relative;
   height: 2px;
-  margin: 50px 0;
+  margin: 20px 0 0;
   color: #697387;
   border-top: 1px solid #E8E8EB;
 
