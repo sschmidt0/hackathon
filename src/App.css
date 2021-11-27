@@ -1,3 +1,10 @@
+/*********** CONTENT: styles for: ***********/
+/*
+    - .App
+    - Basic/common Elements
+*/
+
+/*********** .APP ***********/
 .App {
   padding: 30px 15px;
 }
@@ -13,7 +20,7 @@
   }
 }
 
-/*********** BASIC ELEMENTS ***********/
+/*********** BASIC/COMMON ELEMENTS ***********/
 h1 {
   font-size: 16px;
   font-weight: 500;
@@ -52,8 +59,6 @@ h2 {
     color: #1A1F36;
   }
 }
-
-
 
 img {
   width: 100%;
@@ -117,7 +122,6 @@ input:focus {
 }
 
 select + input {
-  margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-top: none;

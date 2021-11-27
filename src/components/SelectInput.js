@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { getCountries } from '../api/getCountries';
+import { getCountries } from '../assets/api/getCountries';
 
-export const SelectInput = ({ country, setCountry }) => {
+export const SelectInput = ({ country, setCountry, error }) => {
   const [countries, setCountries] = useState('');
   useEffect(() => {
     getCountries(setCountries);
@@ -10,6 +10,7 @@ export const SelectInput = ({ country, setCountry }) => {
   return (
     <>
       <label htmlFor="country">Country or region</label>
+      { error !== undefined && <span className="error-span">{ error }</span> }
       <select name="country" id="country" value={ country } onChange={ (e) => setCountry(e.target.value) }>
         <option value={ null }>Select a country</option>
         { countries !== '' && countries.map( (country, id) => <option key={ id } value={ country.name }>{ country.name }</option>) }

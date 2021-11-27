@@ -20,9 +20,8 @@ export const StyledPaymentContainer = styled.article`
   }
 
   .error-span {
-    position: absolute;
-    bottom: -20px;
-    padding-top: 3px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
     color: red;
   }
 `;
