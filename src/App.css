@@ -78,7 +78,7 @@ button {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 20px 0;
+  margin: 40px 0 20px;
   padding: 5px;
   font-size: 20px;
   background-color: #000;
@@ -90,7 +90,7 @@ button {
 }
 
 button:hover {
-  background-color: silver;
+  background-color: #8792A2;
 }
 
 button:disabled, button[disabled] {

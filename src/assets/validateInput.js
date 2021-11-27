@@ -5,15 +5,16 @@ export const validateInput = (data) => {
   const errors = {};
   const yearStr = new Date().getFullYear();
   const expireStr = parseInt(data.expireDate.substr(-2)) + 2000;
+  const trimmedCardNumber = data.cardNumber.trim(' ');
   const emailRegEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   const visaRegEx = /^4[0-9]{2,}$/;
-  const mastercardRegEx = /^5[1-5][0-9]{1,}|^2[2-7][0-9]{1,}$/;
+  const mastercardRegEx = /^5[1-5][0-9]{14}$/;
   const amexpRegEx = /^3[47][0-9]{5,}$/;
   const discovRegEx = /^6(?:011|5[0-9]{2})[0-9]{3,}$/;
   const expireDateRegEx = /^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$/;
-  const cvcNumberRegEx = /^[0-9]{3, 4}$/;
+  const cvc3DigRegEx = /^\d{3}$/;
+  const cvc4DigRegEx = /^\d{4}$/;
   const zipRegEx = /^\d{5}$|^\d{5}-\d{4}$/;
-
 
   // Convert empty fields to an empty string so we can use validator functions
   data.email = !isEmpty(data.email) ? data.email : "";
@@ -34,13 +35,12 @@ export const validateInput = (data) => {
   // cardNumber check
   if (Validator.isEmpty(data.cardNumber)) {
     errors.cardNumber = "Type in your card number";
-  } else if (data.cardNumber.replace(/[^\d]/g, "").match(visaRegEx) === null) {
-    errors.cardNumber = "Invalid card number";
-  } else if (data.cardNumber.replace(/[^\d]/g, "").match(mastercardRegEx) === null) {
-    errors.cardNumber = "Invalid card number";
-  } else if (data.cardNumber.replace(/[^\d]/g, "").match(amexpRegEx) === null) {
-    errors.cardNumber = "Invalid card number";
-  } else if (data.cardNumber.replace(/[^\d]/g, "").match(discovRegEx) === null) {
+  } else if (
+    trimmedCardNumber.match(visaRegEx) === null &&
+    trimmedCardNumber.match(mastercardRegEx) === null &&
+    trimmedCardNumber.match(amexpRegEx) === null &&
+    trimmedCardNumber.match(discovRegEx) === null
+  ) {
     errors.cardNumber = "Invalid card number";
   }
 
@@ -56,7 +56,7 @@ export const validateInput = (data) => {
   // cvcNumber check
   if (Validator.isEmpty(data.cvcNumber)) {
     errors.cvcNumber = "Type in your CVC number";
-  } else if (data.cvcNumber.match(cvcNumberRegEx) === null) {
+  } else if (data.cvcNumber.match(cvc3DigRegEx) === null && data.cvcNumber.match(cvc4DigRegEx) === null) {
     errors.cvcNumber = "Invalid CVC number";
   }
 

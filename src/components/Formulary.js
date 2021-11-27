@@ -12,7 +12,9 @@ export const Formulary = () => {
   const [fullName, setFullName] = useState('');
   const [country, setCountry] = useState('');
   const [zip, setZip] = useState('');
+  const [buttonText, setButtonText] = useState('Pay $899.00');
   const [errors, setErrors] = useState({});
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,8 +32,20 @@ export const Formulary = () => {
     const errorChecking = validateInput(data);
     if (!errorChecking.isValid) setErrors(errorChecking.errors);
     if (errorChecking.isValid) {
-      setErrors({});
-      console.log('paid successfully');
+      setButtonText('Successfully paid');
+
+      // setTimeout just for animation purposes, not in real life project
+      setTimeout(() => {
+        setErrors({});
+        setEmail('');
+        setCardNumber('');
+        setExpireDate('');
+        setCvcNumber('');
+        setFullName('');
+        setCountry('');
+        setZip('');
+        setButtonText('Pay $899.00');
+      }, 2000);
     }
   };
 
@@ -77,8 +91,8 @@ export const Formulary = () => {
       { errors.zip !== undefined && <span className="error-span">{ errors.zip }</span> }
 
       <ContainedButton
-        // isDisabled={ email === '' || cardNumber === '' || expireDate === '' || cvcNumber === '' || fullName === '' || country  === '' || zip === '' }
-        text="Pay $899.00"
+        isDisabled={ email === '' || cardNumber === '' || expireDate === '' || cvcNumber === '' || fullName === '' || country  === '' || zip === '' }
+        text={ buttonText }
         method={ handleSubmit }
       />
     </form>

@@ -1,5 +1,8 @@
 import { StyledCardDetailsDiv } from '../styles/CardDetailsInputBlock.styles';
 import Cleave from "cleave.js/react";
+import { FaCcVisa, FaCcMastercard, FaCcDiscover } from 'react-icons/fa';
+import { SiAmericanexpress } from 'react-icons/si';
+import { BsCreditCard2BackFill } from 'react-icons/bs';
 
 export const CardDetailsInputBlock = ({
   cardNumber,
@@ -19,9 +22,15 @@ export const CardDetailsInputBlock = ({
           name="cardNumber"
           className="cardInput"
           value={ cardNumber }
-          onChange={ (e) => setCardNumber(e.target.value) }
+          onChange={ (e) => setCardNumber(e.target.rawValue) }
           placeholder="1234 1234 1234 1234"
         />
+        <span className="card-icons">
+          <FaCcVisa /> {' '}
+          <FaCcMastercard /> {' '}
+          <SiAmericanexpress /> {' '}
+          <FaCcDiscover />
+        </span>
         <div className="card-group-second-row">
           <div>
             <Cleave
@@ -44,6 +53,7 @@ export const CardDetailsInputBlock = ({
               placeholder="CVC"
             />
             { errors.cvcNumber !== undefined && <span className="error-span">{ errors.cvcNumber }</span> }
+            <span><BsCreditCard2BackFill /></span>
           </div>
         </div>
       </div>

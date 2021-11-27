@@ -23,15 +23,33 @@ export const StyledCardDetailsDiv = styled.div`
   }
 
   .card-group-second-row {
+    position: relative;
     display: flex;
 
     div {
       width: 50%;
       margin: 0;
     }
+
+    span {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  }
+
+  .card-group {
+    position: relative;
+  }
+
+  .card-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
   }
 
   span {
     display: block;
   }
+
 `;
