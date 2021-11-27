@@ -1,4 +1,4 @@
-import { StyledTextWithLine } from "./TextWithLine.styles";
+import { StyledTextWithLine } from "../styles/TextWithLine.styles";
 
 export const TextWithLine = () => (
   <StyledTextWithLine>

@@ -16,17 +16,19 @@
 /*********** BASIC ELEMENTS ***********/
 h1 {
   font-size: 16px;
-  font-weight: 700;
-  color: #697387;
+  font-weight: 500;
+  line-height: 24px;
+  color: #697386;
   text-align: center;
 
 }
 
 h2 {
   margin-top: 0;
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 900;
-  color: #333;
+  line-height: 44px;
+  color: #1A1F36;
   text-align: center;
 }
 
@@ -44,6 +46,10 @@ h2 {
 
   a {
     margin-left: 11%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1A1F36;
   }
 }
 
@@ -73,7 +79,8 @@ button {
   background-color: #000;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.12), 0px 2px 5px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -81,20 +88,32 @@ button:hover {
   background-color: silver;
 }
 
+button:disabled, button[disabled] {
+  color: #8792A2;
+  background-color: #3C4257;
+  cursor: not-allowed;
+}
+
 label {
   display: block;
   margin: 30px 0 10px 0;
   font-weight: 900;
   font-size: 14px;
-  color: #697387;
+  line-height: 22px;
+  color: #697386;
 }
 
 input {
   box-sizing: border-box;
   width: 100%;
-  padding: 10px;
-  border: 1px solid #E8E8EB;
-  border-radius: 5px;
+  padding: 9px 12px;
+  border: 1px solid rgba(60, 66, 87, 0.12);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+}
+
+input:focus {
+  outline: none;
 }
 
 select + input {

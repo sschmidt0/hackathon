@@ -7,7 +7,11 @@ export const StyledFooter = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #697387;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.015em;
+  color: #8792A2;
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
@@ -27,12 +31,14 @@ export const StyledFooter = styled.footer`
     padding: 0 20px;
 
     @media screen and (min-width: 768px) {
-      border-left: 1px solid #697387;
+      border-left: 1px solid #8792A2;
     }
   }
 
   .icon-img-container {
     margin-top: 6px;
-    width: 70px;
+    width: 49.54px;
+    height: 20px;
+    background: url(redsys.png);
   }
 `;

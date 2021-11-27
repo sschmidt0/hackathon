@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { ContainedButton } from './ContainedButton';
+import { CardDetailsInputBlock } from './CardDetailsInputBlock';
+import { SelectInput } from './SelectInput';
 
 export const Formulary = () => {
   const [email, setEmail] = useState('');
@@ -8,10 +10,11 @@ export const Formulary = () => {
   const [cvcNumber, setCvcNumber] = useState('');
   const [fullName, setFullName] = useState('');
   const [country, setCountry] = useState('');
-  const [isDisabled, setIsDisabled] = useState(true);
+  const [zip, setZip] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log('clicked submit');
   };
 
   return (
@@ -25,33 +28,14 @@ export const Formulary = () => {
       />
       {/* { error !== '' && <span className="error-span">{ error }</span> } */}
 
-      <label htmlFor="cardDetails">Card details</label>
-      <div className="card-group">
-        <input
-          type="text"
-          name="cardNumber"
-          value={ cardNumber }
-          onChange={ (e) => setCardNumber(e.target.value) }
-          placeholder="1234 1234 1234 1234"
-        />
-        {/* { error !== '' && <span className="error-span">{ error }</span> } */}
-        <input
-          type="text"
-          name="expireDate"
-          value={ expireDate }
-          onChange={ (e) => setExpireDate(e.target.value) }
-          placeholder="MM / YY"
-        />
-        {/* { error !== '' && <span className="error-span">{ error }</span> } */}
-        <input
-          type="text"
-          name="cvcNumber"
-          value={ cvcNumber }
-          onChange={ (e) => setCvcNumber(e.target.value) }
-          placeholder="CVC"
-        />
-        {/* { error !== '' && <span className="error-span">{ error }</span> } */}
-      </div>
+      <CardDetailsInputBlock
+        cardNumber={ cardNumber }
+        setCardNumber={ setCardNumber }
+        expireDate={ expireDate }
+        setExpireDate={ setExpireDate }
+        cvcNumber={ cvcNumber }
+        setCvcNumber={ setCvcNumber }
+      />
 
       <label htmlFor="fullName">Name on card</label>
       <input
@@ -62,24 +46,22 @@ export const Formulary = () => {
       />
       {/* { error !== '' && <span className="error-span">{ error }</span> } */}
 
-      <label htmlFor="country">Country or region</label>
-      <select name="country" id="country">
-        <option value="germany">Germany</option>
-        <option value="spain">Spain</option>
-        <option value="england">England</option>
-        <option value="italy">Italy</option>
-      </select>
+      <SelectInput setCountry={ setCountry } />
       <input
         type="text"
+        maxlength="9"
         name="country"
-        value={ country }
-        onChange={ (e) => setCountry(e.target.value) }
+        value={ zip }
+        onChange={ (e) => setZip(e.target.value) }
         placeholder="ZIP"
       />
       {/* { error !== '' && <span className="error-span">{ error }</span> } */}
 
-      <ContainedButton isDisabled={ isDisabled } text="Pay $899.00" method={ handleSubmit } />
-
+      <ContainedButton
+        isDisabled={ email === '' || cardNumber === '' || expireDate === '' || cvcNumber === '' || fullName === '' || country  === '' || zip === '' }
+        text="Pay $899.00"
+        method={ handleSubmit }
+      />
     </form>
   );
 };

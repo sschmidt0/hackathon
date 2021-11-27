@@ -1,5 +1,5 @@
 import { BackLink } from './BackLink';
-import { StyledProductContainer } from './Product.styles';
+import { StyledProductContainer } from '../styles/Product.styles';
 
 export const Product = () => (
   <StyledProductContainer>

@@ -9,7 +9,14 @@ export const StyledPaymentContainer = styled.article`
     justify-content: center;
     height: 100vh;
     margin-top: -30px;
-    padding: 0 60px 0 30px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  div:first-child {
+    @media screen and (min-width: 768px) {
+      width: 70%;
+      margin-left: 80px;
+    }
   }
 
   .error-span {
