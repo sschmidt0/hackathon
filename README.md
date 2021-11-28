@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Hackathon
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is created to participate in the Hackathon organized by Barcelona Digital Talent. It consists of implementing the layout from a given template, implement validation for the payment form and connect an API for the countries that have to be shown as options for the select field within the form. 
 
-## Available Scripts
+<img width="1332" alt="Captura de Pantalla 2021-11-28 a les 14 49 16" src="https://user-images.githubusercontent.com/47662713/143770636-3dcbfba8-8c7e-4a7c-8a37-c98c1447888f.png">
 
-In the project directory, you can run:
+You can visit it at [https://sschmidt0.github.io/hackathon/](https://sschmidt0.github.io/hackathon/).
 
-### `yarn start`
+## Tecnology used ℹ️
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This project is created with React, a JavaScript library to build fast and robust applications. Its basic or common elements are styled in App.css but it also uses styled-components package to style several components. For validation, the packages is-empty and Validator are used to validate if the input is empty or if it corresponds to certain patterns, like the number of a mastercard. Therefore, RegEx are used in validation. For the card details input fields the package Cleave is used which helps with the formatting of the card number input field, the expire date input field and the CVC input field. Lastly, the package react-icons is used for the icons in this project.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+## Prerequisites 📋
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In order to be able to install the project you need to have the following installed:
 
-### `yarn build`
+```
+Node.js
+npm
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation 🔧
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To install the project you need to follow the following steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. On GitHub.com, navigate to the main page of the repository.
+2. Above the list of files, click ⬇️ Code.
 
-### `yarn eject`
+<img width="471" alt="Captura de Pantalla 2021-11-28 a les 14 53 44" src="https://user-images.githubusercontent.com/47662713/143770767-ea37d6e1-6a21-49f7-9095-9add15f6f431.png">
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Copy the HTTPS URL.
+4. Open your terminal.
+5. Type `git clone`, and then paste the URL you copied earlier.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+$ git clone https://github.com/sschmidt0/hackathon.git
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+6. Press Enter to create your local clone.
+7. `cd` into the created folder which contains the project.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+$ cd hackathon
+```
 
-## Learn More
+8. Install the dependencies with `npm intall` to be able to start the project.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+$ npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+9. Start the project with `npm start`.
 
-### Code Splitting
+```
+$ npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
