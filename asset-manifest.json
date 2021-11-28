@@ -1,20 +1,21 @@
 {
   "files": {
     "main.css": "/hackathon/static/css/main.34b6a454.chunk.css",
-    "main.js": "/hackathon/static/js/main.2f8290da.chunk.js",
-    "main.js.map": "/hackathon/static/js/main.2f8290da.chunk.js.map",
+    "main.js": "/hackathon/static/js/main.cfff8533.chunk.js",
+    "main.js.map": "/hackathon/static/js/main.cfff8533.chunk.js.map",
     "runtime-main.js": "/hackathon/static/js/runtime-main.dd608ff5.js",
     "runtime-main.js.map": "/hackathon/static/js/runtime-main.dd608ff5.js.map",
     "static/js/2.aa1cd044.chunk.js": "/hackathon/static/js/2.aa1cd044.chunk.js",
     "static/js/2.aa1cd044.chunk.js.map": "/hackathon/static/js/2.aa1cd044.chunk.js.map",
     "index.html": "/hackathon/index.html",
     "static/css/main.34b6a454.chunk.css.map": "/hackathon/static/css/main.34b6a454.chunk.css.map",
-    "static/js/2.aa1cd044.chunk.js.LICENSE.txt": "/hackathon/static/js/2.aa1cd044.chunk.js.LICENSE.txt"
+    "static/js/2.aa1cd044.chunk.js.LICENSE.txt": "/hackathon/static/js/2.aa1cd044.chunk.js.LICENSE.txt",
+    "static/media/macbook.fb6465cd.png": "/hackathon/static/media/macbook.fb6465cd.png"
   },
   "entrypoints": [
     "static/js/runtime-main.dd608ff5.js",
     "static/js/2.aa1cd044.chunk.js",
     "static/css/main.34b6a454.chunk.css",
-    "static/js/main.2f8290da.chunk.js"
+    "static/js/main.cfff8533.chunk.js"
   ]
 }
