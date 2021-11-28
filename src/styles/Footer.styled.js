@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { theme } from '../assets/theme';
 
 export const StyledFooter = styled.footer`
   grid-area: footer;
@@ -11,7 +12,7 @@ export const StyledFooter = styled.footer`
   font-size: 12px;
   line-height: 22px;
   letter-spacing: 0.015em;
-  color: #8792A2;
+  color: ${theme.iconGrey};
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
@@ -31,7 +32,7 @@ export const StyledFooter = styled.footer`
     padding: 0 20px;
 
     @media screen and (min-width: 768px) {
-      border-left: 1px solid #8792A2;
+      border-left: 1px solid ${theme.iconGrey};
     }
   }
 

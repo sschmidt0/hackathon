@@ -31,7 +31,7 @@ export const StyledCardDetailsDiv = styled.div`
       margin: 0;
     }
 
-    span {
+    .span-card-icons {
       position: absolute;
       top: 10px;
       right: 10px;

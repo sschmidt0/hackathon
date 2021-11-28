@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { theme } from '../assets/theme';
 
 export const StyledTextWithLine = styled.div`
   position: relative;
   margin: 40px 0 0;
-  color: #8792A2;
+  color: ${theme.textLine};
   border: 1px solid rgba(60, 66, 87, 0.12);
 
   p {
@@ -17,6 +18,6 @@ export const StyledTextWithLine = styled.div`
     font-size: 16px;
     line-height: 24px;
     text-align: center;
-    background-color: #fff;
+    background-color: ${theme.white};
   }
 `;

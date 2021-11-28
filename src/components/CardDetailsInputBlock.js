@@ -16,7 +16,6 @@ export const CardDetailsInputBlock = ({
   <StyledCardDetailsDiv>
     <label htmlFor="cardDetails">Card details</label>
       <div className="card-group">
-        { errors.cardNumber !== undefined && <span className="error-span">{ errors.cardNumber }</span> }
         <Cleave
           options={{ creditCard: true }}
           name="cardNumber"
@@ -25,11 +24,12 @@ export const CardDetailsInputBlock = ({
           onChange={ (e) => setCardNumber(e.target.rawValue) }
           placeholder="1234 1234 1234 1234"
         />
+        { errors.cardNumber !== undefined && <span className="error-span error-span-top">{ errors.cardNumber }</span> }
         <span className="card-icons">
-          <FaCcVisa /> {' '}
-          <FaCcMastercard /> {' '}
-          <SiAmericanexpress /> {' '}
-          <FaCcDiscover />
+          <FaCcVisa className="span-card-icons" /> {' '}
+          <FaCcMastercard className="span-card-icons" /> {' '}
+          <SiAmericanexpress className="span-card-icons" /> {' '}
+          <FaCcDiscover className="span-card-icons" />
         </span>
         <div className="card-group-second-row">
           <div>
@@ -53,7 +53,7 @@ export const CardDetailsInputBlock = ({
               placeholder="CVC"
             />
             { errors.cvcNumber !== undefined && <span className="error-span">{ errors.cvcNumber }</span> }
-            <span><BsCreditCard2BackFill /></span>
+            <span><BsCreditCard2BackFill className="span-card-icons" /></span>
           </div>
         </div>
       </div>
