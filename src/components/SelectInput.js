@@ -13,7 +13,7 @@ export const SelectInput = ({ country, setCountry, error }) => {
       { error !== undefined && <span className="error-span">{ error }</span> }
       <select name="country" id="country" value={ country } onChange={ (e) => setCountry(e.target.value) }>
         <option value={ null }>Select a country</option>
-        { countries !== '' && countries.map( (country, id) => <option key={ id } value={ country.name }>{ country.name }</option>) }
+        { countries !== '' && countries.map( (countryItem, id) => <option key={ id } value={ countryItem.name }>{ countryItem.name }</option>) }
       </select>
     </>
   );
