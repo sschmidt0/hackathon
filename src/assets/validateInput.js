@@ -7,11 +7,11 @@ export const validateInput = (data) => {
   const expireStr = parseInt(data.expireDate.substr(-2)) + 2000;
   const trimmedCardNumber = data.cardNumber.trim(' ');
   const emailRegEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  const visaRegEx = /^4[0-9]{2,}$/;
-  const mastercardRegEx = /^5[1-5][0-9]{14}$/;
-  const amexpRegEx = /^3[47][0-9]{5,}$/;
-  const discovRegEx = /^6(?:011|5[0-9]{2})[0-9]{3,}$/;
-  const expireDateRegEx = /^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$/;
+  const visaRegEx = /^4[\d]{2,}$/;
+  const mastercardRegEx = /^5[1-5][\d]{14}$/;
+  const amexpRegEx = /^3[47][\d]{5,}$/;
+  const discovRegEx = /^6(?:011|5[\d]{2})[\d]{3,}$/;
+  const expireDateRegEx = /^(0[1-9]|1[0-2])\/?([\d]{4}|[\d]{2})$/;
   const cvc3DigRegEx = /^\d{3}$/;
   const cvc4DigRegEx = /^\d{4}$/;
   const zipRegEx = /^\d{5}$|^\d{5}-\d{4}$/;
